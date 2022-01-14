@@ -12,7 +12,7 @@ class Menu : AppCompatActivity() {
     private lateinit var buttonCars : Button
     private lateinit var buttonMyGarage: Button
     private lateinit var buttonProfile: Button
-    private lateinit var buttonParameters : Button
+    private lateinit var buttonAboutUs : Button
 
 
 
@@ -25,6 +25,8 @@ class Menu : AppCompatActivity() {
         init()
         registerListeners()
         profileListeners()
+        goToGarage()
+        goToAboutUs()
 
     }
 
@@ -33,7 +35,7 @@ class Menu : AppCompatActivity() {
         buttonCars = findViewById(R.id.button7)
         buttonMyGarage = findViewById(R.id.button8)
         buttonProfile = findViewById(R.id.button9)
-        buttonParameters = findViewById(R.id.button11)
+        buttonAboutUs = findViewById(R.id.button11)
     }
 
 
@@ -42,14 +44,28 @@ class Menu : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 
     private fun profileListeners() {
-        val intent = Intent(this, Profile::class.java)
-        startActivity(intent)
-        finish()
+        buttonProfile.setOnClickListener() {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun goToGarage() {
+        buttonCars.setOnClickListener() {
+            val intent = Intent(this, ItemCars::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun goToAboutUs() {
+        buttonAboutUs.setOnClickListener() {
+            val intent = Intent(this, AboutUs::class.java)
+            startActivity(intent)
+        }
     }
 
 }

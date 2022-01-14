@@ -2,6 +2,7 @@ package com.example.garagefinaluri.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -75,7 +76,9 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
                     if (task.isSuccessful) {
                         val intent = Intent (this@FragmentAuthorization.requireContext(), ItemCars::class.java)
                         startActivity(intent)
-                        }
+                        } else {
+                        Toast.makeText(this@FragmentAuthorization.requireActivity(), "Error!", Toast.LENGTH_SHORT).show()
+                    }
                     }
                 }
 

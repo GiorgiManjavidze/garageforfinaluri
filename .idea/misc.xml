@@ -7,19 +7,31 @@
         <entry key="app/src/main/res/drawable-v24/buttons.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/background_1.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/background_2.xml" value="0.21481481481481482" />
         <entry key="app/src/main/res/drawable/buttons.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/buttons2.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/for_buttons.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/maincpage_buttons.xml" value="0.25416666666666665" />
-        <entry key="app/src/main/res/layout/activity_authorization.xml" value="0.3771478222865116" />
+        <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.18787689380521955" />
+        <entry key="app/src/main/res/layout/activity_authorization.xml" value="0.18164323573650776" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13179347826086957" />
-        <entry key="app/src/main/res/layout/activity_mainpage.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/layout/activity_mainpage.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.3816961230717444" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3478439861813929" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.10182860813935146" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.11979166666666667" />
+        <entry key="app/src/main/res/layout/activity_reset_password.xml" value="0.11979166666666667" />
+        <entry key="app/src/main/res/layout/aston_martin.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/bmw_m3.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/chevy_camaro.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/ferrarri_maranello.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/ford_mustang.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/fragment_first_page.xml" value="0.13179347826086957" />
-        <entry key="app/src/main/res/layout/item_cars.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/layout/item_cars.xml" value="0.17432738956627292" />
+        <entry key="app/src/main/res/layout/nissan_skyline.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/toyota_supra.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/very_first_page.xml" value="0.13179347826086957" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25416666666666665" />
       </map>
     </option>
