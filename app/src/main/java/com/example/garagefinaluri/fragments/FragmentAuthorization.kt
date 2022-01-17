@@ -6,19 +6,20 @@ import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.example.garagefinaluri.ItemCars
-import com.example.garagefinaluri.Main_Page
-import com.example.garagefinaluri.Profile
-import com.example.garagefinaluri.R
+import com.example.garagefinaluri.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
     private lateinit var editTextEmail: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -65,7 +66,7 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
             } else if (password.isEmpty()) {
                 editTextPassword.error = "შეავსეთ პაროლი!"
                 return@setOnClickListener
-            } else if(password.length < 8) {
+            } else if (password.length < 8) {
                 editTextPassword.error = "პაროლი უნდა შეიცავდეს მინიმუმ 8 სიმბოლოს"
                 return@setOnClickListener
             }
@@ -74,17 +75,37 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
                 .signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent (this@FragmentAuthorization.requireContext(), ItemCars::class.java)
+                        val intent = Intent(
+                            this@FragmentAuthorization.requireContext(),
+                            com.example.garagefinaluri.Menu::class.java
+                        )
                         startActivity(intent)
-                        } else {
-                        Toast.makeText(this@FragmentAuthorization.requireActivity(), "Error!", Toast.LENGTH_SHORT).show()
+                        activity?.finish()
+                    } else {
+                        Toast.makeText(
+                            this@FragmentAuthorization.requireActivity(),
+                            "Error!",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
+
+                    if (FirebaseAuth.getInstance().currentUser != null) {
+                        startActivity(
+                            Intent(
+                                this@FragmentAuthorization.requireContext(),
+                                com.example.garagefinaluri.Menu::class.java
+                            )
+                        )
+
                     }
+
                 }
 
 
-
         }
+
+
+    }
 
 }
 

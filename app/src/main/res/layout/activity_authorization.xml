@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_1">
+    android:background="@drawable/background_1"
+    android:layout_gravity="center">
 
 
     <TextView
@@ -17,7 +18,6 @@
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,6 @@
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="72dp"
         android:ems="10"
         android:hint="მეილი"
@@ -33,6 +32,7 @@
         android:minHeight="48dp"
         android:textColor="#F3F3F3"
         android:textColorHint="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -40,7 +40,6 @@
         android:id="@+id/editTextTextPassword3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="პაროლი"
@@ -48,6 +47,7 @@
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 

@@ -42,5 +42,6 @@
         <action
             android:id="@+id/action_fragmentRegister_to_fragmentAuthorization"
             app:destination="@id/fragmentAuthorization" />
+
     </fragment>
 </navigation>

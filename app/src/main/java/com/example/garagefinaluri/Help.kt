@@ -1,12 +1,14 @@
-package com.example.garagefinaluri.CarInfos
+package com.example.garagefinaluri
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.garagefinaluri.R
 
-class camaroInfo : AppCompatActivity() {
+class Help : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.chevy_camaro)
+        setContentView(R.layout.activity_help)
+
+
+
     }
 }

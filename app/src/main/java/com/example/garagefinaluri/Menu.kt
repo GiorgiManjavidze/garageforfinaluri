@@ -10,7 +10,7 @@ class Menu : AppCompatActivity() {
 
 
     private lateinit var buttonCars : Button
-    private lateinit var buttonMyGarage: Button
+    private lateinit var buttonHelp: Button
     private lateinit var buttonProfile: Button
     private lateinit var buttonAboutUs : Button
 
@@ -27,13 +27,14 @@ class Menu : AppCompatActivity() {
         profileListeners()
         goToGarage()
         goToAboutUs()
+        goToHelp()
 
     }
 
     private fun init() {
         buttonLogout = findViewById(R.id.button12)
         buttonCars = findViewById(R.id.button7)
-        buttonMyGarage = findViewById(R.id.button8)
+        buttonHelp = findViewById(R.id.button8)
         buttonProfile = findViewById(R.id.button9)
         buttonAboutUs = findViewById(R.id.button11)
     }
@@ -56,7 +57,7 @@ class Menu : AppCompatActivity() {
 
     private fun goToGarage() {
         buttonCars.setOnClickListener() {
-            val intent = Intent(this, ItemCars::class.java)
+            val intent = Intent(this, Testing::class.java)
             startActivity(intent)
         }
     }
@@ -67,5 +68,13 @@ class Menu : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    private fun goToHelp() {
+        buttonHelp.setOnClickListener() {
+            val intent = Intent(this, Help::class.java)
+            startActivity(intent)
+        }
+    }
+
 
 }
