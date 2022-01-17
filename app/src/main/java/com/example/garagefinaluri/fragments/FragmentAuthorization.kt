@@ -20,8 +20,20 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
 
+
+
+
+
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        if (FirebaseAuth.getInstance().currentUser != null) {
+            goToProfile()
+        }
 
         val navController = Navigation.findNavController(view)
 
@@ -32,13 +44,6 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
                 FragmentAuthorizationDirections.actionFragmentAuthorizationToFragmentResetPassword()
             navController.navigate(reset)
         }
-
-
-
-
-
-
-
 
 
         editTextEmail = view.findViewById(R.id.editTextTextEmailAddress2)
@@ -87,24 +92,25 @@ class FragmentAuthorization: Fragment(R.layout.activity_authorization) {
                             "Error!",
                             Toast.LENGTH_SHORT
                         ).show()
-                    }
 
-                    if (FirebaseAuth.getInstance().currentUser != null) {
-                        startActivity(
-                            Intent(
-                                this@FragmentAuthorization.requireContext(),
-                                com.example.garagefinaluri.Menu::class.java
-                            )
-                        )
+
 
                     }
 
                 }
 
 
+
         }
 
 
+
+    }
+
+    private fun goToProfile() {
+        val intent = Intent(this@FragmentAuthorization.requireContext(), com.example.garagefinaluri.Menu::class.java)
+        startActivity(intent)
+        activity?.finish()
     }
 
 }

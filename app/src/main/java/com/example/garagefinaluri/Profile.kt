@@ -1,6 +1,6 @@
 package com.example.garagefinaluri
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -68,7 +68,6 @@ class Profile : AppCompatActivity() {
             val name = editTextPersonName.text.toString()
             val url = editTextUrl.text.toString()
 
-
             val userInfo = UserInfo(name, url)
 
 
@@ -77,7 +76,6 @@ class Profile : AppCompatActivity() {
         }
 
     }
-
 
 
 
